@@ -7,6 +7,7 @@ export function oidcAuthorizeURL({
   origin,
   state,
   redirectUri,
+  scope,
   codeChallenge,
 }: OAuthOptions): string {
   if (!authorizeUrl) throw new ApiError(2003);
@@ -16,7 +17,7 @@ export function oidcAuthorizeURL({
   u.searchParams.set('client_id', clientId);
   u.searchParams.set('redirect_uri', redirectUri ?? `${origin}/api/auth/oauth/oidc`);
   u.searchParams.set('response_type', 'code');
-  u.searchParams.set('scope', 'openid email profile offline_access');
+  u.searchParams.set('scope', scope ?? 'openid email profile offline_access');
 
   if (state) u.searchParams.set('state', state);
   if (codeChallenge) {

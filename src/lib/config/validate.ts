@@ -377,6 +377,7 @@ export const schema = z.object({
         tokenUrl: z.url(),
         endSessionUrl: z.url().nullable().default(null),
         redirectUri: z.url().nullable().default(null),
+        scope: z.string().optional(),
       })
       .or(
         z.object({
@@ -387,6 +388,7 @@ export const schema = z.object({
           tokenUrl: z.undefined().optional(),
           endSessionUrl: z.undefined().optional(),
           redirectUri: z.undefined().optional(),
+          scope: z.string().optional(),
         }),
       ),
   }),
