@@ -33,6 +33,7 @@ async function oidcOauth(
         state: oauthState,
         redirectUri: config.oauth.oidc.redirectUri,
         authorizeUrl: config.oauth.oidc.authorizeUrl!,
+        scope: config.oauth.oidc.scope,
         codeChallenge,
       }),
     );

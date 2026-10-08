@@ -132,6 +132,7 @@ export const ENVS = [
   env('oauth.oidc.tokenUrl', 'OAUTH_OIDC_TOKEN_URL', 'string', true),
   env('oauth.oidc.endSessionUrl', 'OAUTH_OIDC_END_SESSION_URL', 'string', true),
   env('oauth.oidc.redirectUri', 'OAUTH_OIDC_REDIRECT_URI', 'string', true),
+  env('oauth.oidc.scope', 'OAUTH_OIDC_SCOPE', 'string'),
 
   env('mfa.totp.enabled', 'MFA_TOTP_ENABLED', 'boolean', true),
   env('mfa.totp.issuer', 'MFA_TOTP_ISSUER', 'string', true),

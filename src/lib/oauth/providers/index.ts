@@ -31,6 +31,7 @@ export type OAuthOptions = {
   redirectUri?: string | null;
 
   authorizeUrl?: string;
+  scope?: string;
 
   codeChallenge?: string;
 };
